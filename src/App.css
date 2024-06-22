@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+  font-family: "Outfit", sans-serif;
+}
+body{
+  background-color: #0A0A0A !important;
+}
+.main{
+  background: radial-gradient(ellipse at bottom, #1b1d35 0%, #090A0F 100%);
+}
+.main::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: 
+    repeating-radial-gradient(closest-corner at 21% 21%, #fff, rgba(0,0,255,.5), rgb(3,0,255) 20%), 
+    repeating-radial-gradient(closest-corner at 61% 21%, #fff, rgba(0,255,0,.5), rgb(3,0,255) 20%), 
+    repeating-radial-gradient(closest-corner at 91% 51%, #fff, rgba(255,255,1,.5), rgb(055,255,255) 20%);
+  background-size: 15px 13px, 12px 22px, 12px 22px;
+  background-blend-mode: exclusion, normal;
+  mix-blend-mode: exclusion;
+  content: '';
+  opacity: 0.05;
+}
+
+.bg{
+    /* background: radial-gradient(#5ddcff, #3c67e3 43%, #4e00c2); */
+    background: radial-gradient(45.6% 68.2% at 50% 0%, #7808ff 10%, rgba(3, 6, 13, 0) 100%);
+    border-radius: 999px;
+    filter: blur(80px);
+    opacity: 1;
+    height: 60vh;
+    aspect-ratio:2;
+    max-width: 100% !important;
+}
+.img{
+  opacity: 0.03;
+}
+
+.bgshadow{
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 1000px 0 #6200ff66;
+  background-color: #090A0F;
+}
+.copySvg:hover path{
+  cursor: pointer;
+  stroke: white;
+}
+ol{
+  right: 0 !important;
+}
+.emailsContent a{
+  text-decoration: underline;
+  font-weight: 200;
+}
