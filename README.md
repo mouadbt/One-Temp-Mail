@@ -15,6 +15,9 @@ This repository contains the source code for a fully functional temporary email 
 **Clone the repository**:
 git clone https://github.com/mouadbt/One-Temp-Mail.git
 
+**Install dependencies**:
+npm i
+
 **Start the development server**:
 npm run dev 
 
