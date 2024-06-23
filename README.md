@@ -20,7 +20,7 @@ npm run dev
 
 
 ## Usage
-1. **Open your web browser** and navigate to [http://localhost:3000](http://localhost:5173/One-Temp-Mail/).
+1. **Open your web browser** and navigate to http://localhost:5173/One-Temp-Mail/.
 2. **Enter your username or random text**: You can enter your desired username or any random text (as you prefer).
 3. **Generate a temporary email**:
    - Click on the "Generate Email" button to create a new temporary email address.
