@@ -375,7 +375,7 @@ export default function Email() {
                         //  ___________________________________________  select the domain
                         isNameSelected ? (
                             <>
-                                <form action="#" onSubmit={createNameAccount} className='w-full sm:w-1/2 md:max-w-1/4 mx-auto flex gap-4 flex-col items-stretch sm:flex-row'>
+                                <form action="#" onSubmit={createNameAccount} className='mx-auto *:w-full sm:w-1/2 md:max-w-1/4 flex gap-4 flex-col items-stretch justify-center sm:flex-row'>
                                     <Select
                                         onValueChange={(value) => setCustomEmail(value)}
                                     >
