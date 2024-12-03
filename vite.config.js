@@ -4,7 +4,7 @@ import path from "path"
 
 export default defineConfig({
   plugins: [react()],
-  base: "/One-Temp-Mail-V2/",
+  base: "/One-Temp-Mail-2",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
