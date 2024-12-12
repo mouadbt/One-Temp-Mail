@@ -68,7 +68,9 @@ export default function Email() {
     const recaptchaSecretKey = import.meta.env.VITE_HCAPTCHA_SITE_KEY;
     const [messagesContent, setMessagesContent] = useState('');
     const [customEmail, setCustomEmail] = useState('');
-    const [messagesReady, setMessagesReady] = useState(false);
+    const [messagesReady, setMessagesReady] = useState(() => {
+        return JSON.parse(sessionStorage.getItem('emailData'))?.email ? true : false
+    });
 
     // Sets up click listener for handling links to open in new tab
     useEffect(() => {
@@ -318,7 +320,7 @@ export default function Email() {
                         <div className="z-50 flex flex-col items-center justify-center">
                             <p className="text-gray-200 text-base sm:text-xl font-medium mb-2">Your temporary email address is:</p>
                             <div className="flex items-center gap-4">
-                                <p className="text-white text-2xl sm:text-4xl font-bold" id='EmailAddr'>{email}</p>
+                                <p className="text-white text-xl sm:text-4xl font-bold" id='EmailAddr'>{email}</p>
                                 <TooltipProvider delayDuration={0}>
                                     <Tooltip>
                                         <TooltipTrigger aria-label="Copy email" className='flex items-center justify-center' onClick={CopyEmail}>
@@ -582,7 +584,7 @@ export default function Email() {
                                         )
                                 }
                             </h2>
-                            <h3 className='text-gray-500 text-lg font-light'>
+                            <h3 className='text-gray-500 text-lg font-light text-center'>
                                 {
                                     messagesReady ? (
                                         <span>This operation is performed automatically</span>
