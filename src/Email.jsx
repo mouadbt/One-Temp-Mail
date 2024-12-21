@@ -300,7 +300,7 @@ export default function Email() {
 
     return (
         <section
-            className={`main relative w-full min-h-screen sm:h-screen flex px-[5%] pb-[2%] sm:pb-0 flex-col items-center justify-between gap-2 ${email ? 'sm:pt-[5%] pt-[25%]' : 'sm:pt-[10%] pt-[25%]'}`}
+            className={`main relative w-full min-h-screen flex px-[5%] pb-[2%] sm:pb-0 flex-col items-center justify-between gap-2 ${email ? 'pt-[6%]' : 'pt-[10%]'}`}
         >
             {/* Gradiant shap at top */}
             <div className="bg z-0 w-full"></div>
@@ -342,7 +342,7 @@ export default function Email() {
 
                                         <Dialog>
                                             <DialogTrigger>
-                                                <ResetIcon className='mt-2 sm:-mb-2 -mb-4 w-4 h-4 sm:w-6 sm:h-5 text-oneColor' />
+                                                <ResetIcon className='mt-2 sm:-mb-2 w-4 h-4 sm:w-6 sm:h-5 text-oneColor' />
                                             </DialogTrigger>
                                             <DialogContent className="bg-black border-gray-700 max-w-[90%] sm:max-w-md rounded-xl *:text-start">
                                                 <DialogHeader>
@@ -522,7 +522,7 @@ export default function Email() {
             </Drawer>
 
             {/* ___________________________________________ Inbox container */}
-            <div className="w-full flex flex-col items-stretch justify-start border border-gray-700 m-0 bgshadow mt-12 my-10 rounded-3xl p-8 ">
+            <div className="w-full flex flex-col items-stretch justify-start border border-gray-700 m-0 bgshadow mt-8 rounded-3xl p-8 min-h-60">
                 <h1 className="text-white text-2xl select-none">Inbox</h1>
                 <hr className="border-gray-700 mb-2" />
                 {messages.length > 0 ? (
