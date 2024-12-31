@@ -40,7 +40,7 @@ import { Button } from './components/ui/button'
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Toaster, toast } from 'sonner'
-import { Mail, Loader2, Loader2Icon, LucideLoader, LucideLoaderCircle, LucideLoaderPinwheel, MailOpen, TrainTrack, ClipboardIcon } from "lucide-react"
+import { Mail, Loader2, Loader2Icon, LucideLoader, LucideLoaderCircle, LucideLoaderPinwheel, MailOpen, TrainTrack, ClipboardIcon, Clipboard } from "lucide-react"
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { getDomains, createAccount, getToken, getMessages, getMessageContentById } from './functions';
 import { ClipboardCopyIcon, InfoCircledIcon, ResetIcon } from '@radix-ui/react-icons'
@@ -305,6 +305,8 @@ export default function Email() {
             {/* Gradiant shap at top */}
             <div className="bg z-0 w-full"></div>
 
+            <div className="noise absolute w-full h-full inset-0 opacity-15"></div>
+
             {/* Container of title and form */}
             <div className='hero z-40 w-full'>
                 <h1 className="text-white text-center text-3xl font-bold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1]">
@@ -324,7 +326,8 @@ export default function Email() {
                                 <TooltipProvider delayDuration={0}>
                                     <Tooltip>
                                         <TooltipTrigger aria-label="Copy email" className='flex items-center justify-center' onClick={CopyEmail}>
-                                            <ClipboardCopyIcon className='translate-y-1 w-5 h-5 sm:w-8 sm:h-8 text-oneColor' />
+                                            {/* <ClipboardCopyIcon className='translate-y-1 w-5 h-5 sm:w-8 sm:h-8 text-oneColor' /> */}
+                                            <Clipboard className='translate-y-[.1rem] w-5 h-5 sm:w-8 sm:h-8 text-oneColor' />
                                             {/* <svg width='32' className='z-50 copySvg' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 11C6 8.17157 6 6.75736 6.87868 5.87868C7.75736 5 9.17157 5 12 5H15C17.8284 5 19.2426 5 20.1213 5.87868C21 6.75736 21 8.17157 21 11V16C21 18.8284 21 20.2426 20.1213 21.1213C19.2426 22 17.8284 22 15 22H12C9.17157 22 7.75736 22 6.87868 21.1213C6 20.2426 6 18.8284 6 16V11Z" stroke="#7808ff" strokeWidth="1.5" data-darkreader-inline-stroke=""></path> <path opacity="0.5" d="M6 19C4.34315 19 3 17.6569 3 16V10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H15C16.6569 2 18 3.34315 18 5" stroke="#7808ff" strokeWidth="1.5" data-darkreader-inline-stroke=""></path> </g></svg> */}
                                         </TooltipTrigger>
                                         <TooltipContent
@@ -366,7 +369,7 @@ export default function Email() {
 
                                     </TooltipTrigger>
                                     <TooltipContent
-                                        className='bg-gray-800 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50 border border-gray-600'
+                                        className='bg-black/50 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-50 border border-gray-600'
                                     >
                                         <p >Reset and Generate a New Email Address</p>
                                     </TooltipContent>
@@ -450,18 +453,7 @@ export default function Email() {
                                 //  ___________________________________________  choose email way
                                 <>
                                     <div className='flex flex-col sm:flex-row gap-2 sm:gap-4 w-full justify-center items-center z-50'>
-                                        {/* <button
-                                            onClick={}
-                                            className='active:translate-y-[2px] whitespace-nowrap group flex pl-2 gap-2 items-center justify-start rounded-3xl bg-oneColor py-3 px-4 text-sm transition-all duration-300 hover:bg-gray-100 active:bg-gray-400  hover:text-black shadow-sm font-medium h-10'>
-                                            <span className='aspect-square p-1 bg-white rounded-full text-sm group-hover:bg-black transition-colors duration-300'>
-                                                <svg className='text-[0px] -translate-x-[200%] group-active:-rotate-45 group-hover:text-lg group-hover:translate-x-0 transition-all duration-300' width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
-                                            </span >
-                                            <span>
-                                                Random Email
-                                            </span>
-                                        </button > */}
                                         <button
-                                            // onClick={beforeRandomEmailGenration}
                                             onClick={beforeRandomEmailGenration}
                                             className='w-[80%] sm:w-fit justify-center active:translate-y-[2px] whitespace-nowrap group flex pl-2 gap-2 items-center sm:justify-start rounded-3xl bg-oneColor py-3 px-4 text-sm transition-all duration-300 hover:bg-white active:bg-gray-400  hover:text-black shadow-sm font-medium h-10'>
                                             <span className='aspect-square p-1 bg-white rounded-full text-sm group-active:bg-gray-400 transition-colors duration-300'>
@@ -473,10 +465,6 @@ export default function Email() {
                                                 Random Email
                                             </span>
                                         </button >
-                                        {/* <Button disabled className='active:translate-y-[2px] whitespace-nowrap group flex pl-2 gap-2 items-center justify-start rounded-3xl bg-oneColor py-3 px-4 text-sm transition-all duration-300 hover:bg-gray-100 active:bg-gray-400  hover:text-black shadow-sm font-medium h-10'>
-                                            <LucideLoaderPinwheel className="animate-spin" />
-                                            Please wait
-                                        </Button> */}
                                         <span>or</span>
                                         <button
                                             onClick={beforeShowForm}
@@ -522,14 +510,14 @@ export default function Email() {
             </Drawer>
 
             {/* ___________________________________________ Inbox container */}
-            <div className="w-full flex flex-col items-stretch justify-start border border-gray-700 m-0 bgshadow mt-8 rounded-3xl p-8 min-h-60">
+            <div className="w-full flex flex-col items-stretch justify-start border border-gray-700 z-20 m-0 bgshadow mt-8 rounded-3xl p-8 min-h-60">
                 <h1 className="text-white text-2xl select-none">Inbox</h1>
                 <hr className="border-gray-700 mb-2" />
                 {messages.length > 0 ? (
-                    <div>
+                    <div className=''>
                         <Accordion type="single" collapsible>
                             {messages.map(message => (
-                                <AccordionItem value={message['@id']} key={message['@id']}>
+                                <AccordionItem value={message['@id']} key={message['@id']} className=' '>
                                     <AccordionTrigger onClick={() => handleFetchMessageContent(message.id)} className={`text-white text-start flex flex-wrap md:flex-nowrap justify-between w-full items-center p-2 px-4  my-1 ${seenMessages.includes(message.id) ? '' : 'border-l-8 rounded border-[#7808ff]'}`}>
                                         <div className='w-full md:w-fit mb-2 md:mb-0'>
                                             <div className="flex gap-2">
