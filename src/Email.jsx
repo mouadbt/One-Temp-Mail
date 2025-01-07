@@ -300,7 +300,7 @@ export default function Email() {
 
     return (
         <section
-            className={`main relative w-full min-h-screen flex px-[5%] pb-[2%] sm:pb-0 flex-col items-center justify-between gap-2 ${email ? 'pt-[6%]' : 'pt-[10%]'}`}
+            className={`main relative w-full min-h-screen flex px-[5%] pb-[2%] sm:pb-0 flex-col items-center justify-between gap-2 ${email ? 'pt-[30%] md:pt-[6%]' : 'pt-[30%] md:pt-[10%]'}`}
         >
             {/* Gradiant shap at top */}
             <div className="bg z-0 w-full"></div>
@@ -322,7 +322,7 @@ export default function Email() {
                         <div className="z-50 flex flex-col items-center justify-center">
                             <p className="text-gray-200 text-base sm:text-xl font-medium mb-2">Your temporary email address is:</p>
                             <div className="flex items-center gap-4">
-                                <p className="text-white text-xl sm:text-4xl font-bold" id='EmailAddr'>{email}</p>
+                                <p className="text-white text-lg sm:text-4xl font-bold" id='EmailAddr'>{email}</p>
                                 <TooltipProvider delayDuration={0}>
                                     <Tooltip>
                                         <TooltipTrigger aria-label="Copy email" className='flex items-center justify-center' onClick={CopyEmail}>
