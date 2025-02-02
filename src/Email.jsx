@@ -7,7 +7,6 @@ import {
     DrawerFooter,
     DrawerHeader,
     DrawerTitle,
-    DrawerTrigger,
 } from "@/components/ui/drawer"
 import {
     Select,
@@ -40,10 +39,10 @@ import { Button } from './components/ui/button'
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Toaster, toast } from 'sonner'
-import { Mail, Loader2, Loader2Icon, LucideLoader, LucideLoaderCircle, LucideLoaderPinwheel, MailOpen, TrainTrack, ClipboardIcon, Clipboard } from "lucide-react"
+import { MailOpen, Clipboard } from "lucide-react"
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { getDomains, createAccount, getToken, getMessages, getMessageContentById } from './functions';
-import { ClipboardCopyIcon, InfoCircledIcon, ResetIcon } from '@radix-ui/react-icons'
+import { InfoCircledIcon, ResetIcon } from '@radix-ui/react-icons'
 export default function Email() {
     const [isFormVisible, setIsFormVisible] = useState(false);
     const [isNameSelected, setIsNameSelected] = useState(false);
@@ -74,14 +73,13 @@ export default function Email() {
 
     // Sets up click listener for handling links to open in new tab
     useEffect(() => {
-        document.addEventListener('click', (event) => {
+        const handleClick = (event) => {
             if (event.target.tagName === 'A') {
                 event.target.target = '_blank';
             }
-        });
-        return () => {
-            document.removeEventListener('click', () => { });
         };
+        document.addEventListener('click', handleClick);
+        return () => document.removeEventListener('click', handleClick);
     }, []);
 
     // Fetches available email domains on component mount 
@@ -203,6 +201,9 @@ export default function Email() {
 
     const createAccountAndGenerateEmail = async (the_email, the_password) => {
         // Creates account with generated email and password
+        toast.success("Loading...", {
+            className: 'toast !bg-oneColor border-[#4b00c4] [&>button]:border-[#4b00c4] [&>button]:!bg-oneColor [&>button]:transition-all',
+        });
         try {
             const res = await createAccount(the_email, the_password);
             retrieveToken(res.data.address, the_password);
@@ -256,9 +257,7 @@ export default function Email() {
         try {
             const content = await getMessageContentById(id, token);
             setMessagesContent(content);
-            const seenMsgs = seenMessages;
-            seenMsgs.push(id);
-            setSeenMessages(seenMsgs);
+            setSeenMessages(prev => [...prev, id]);
             updateSessionStorage('seenMessages', seenMessages);
         } catch (error) {
             console.error('Error fetching message content:', error);
