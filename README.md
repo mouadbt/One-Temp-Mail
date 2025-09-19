@@ -15,7 +15,6 @@ A free, privacy-focused temporary email service built with React. Generate dispo
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [star](#star)
 
 ## About
 One Temp Mail is a free, open-source temporary email service built with React. It allows users to generate disposable email addresses (random or custom with hCaptcha verification), receive emails, and view contents in a user-friendly interface. Perfect for protecting your privacy and avoiding spam when signing up for online services.
@@ -57,7 +56,3 @@ Try One Temp Mail in action: [One Temp Mail](https://mouadbt.github.io/One-Temp-
 3. Click "Generate Email" to create a disposable address.
 4. Copy the email and use it for sign-ups or testing.
 5. Monitor the inbox for incoming emails in real-time.
-
-
-## Like it ?
-⭐ If you like One Temp Mail, please give it a star!
