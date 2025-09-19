@@ -3,7 +3,7 @@
 This repository contains the source code for a fully functional temporary email service built using React. The application allows users to generate temporary email addresses, receive emails, and view email contents within a user-friendly web interface. It's an ideal solution for users who need to protect their privacy or avoid spam when signing up for online services.
 
 ## 🌐 Live Demo  
-**Try it here:** [One Temp Mail](https://mouadbt.github.io/One-Temp-Mail-2) 
+**Try it here:** [One Temp Mail](https://mouadbt.github.io/One-Temp-Mail) 
 
 ## Technologies Used
 
