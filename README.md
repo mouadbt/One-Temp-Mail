@@ -1,34 +1,63 @@
+
 # One Temp Mail
 
-This repository contains the source code for a fully functional temporary email service built using React. The application allows users to generate temporary email addresses, receive emails, and view email contents within a user-friendly web interface. It's an ideal solution for users who need to protect their privacy or avoid spam when signing up for online services.
+![One Temp Mail Demo](https://mouadbt.github.io/One-Temp-Mail-2/demo.gif)
 
-## 🌐 Live Demo  
-**Try it here:** [One Temp Mail](https://mouadbt.github.io/One-Temp-Mail) 
+A free, privacy-focused temporary email service built with React. Generate disposable emails, protect your inbox from spam, and enjoy a seamless user experience.
+
+[![Stars](https://img.shields.io/github/stars/mouadbt/One-Temp-Mail-2)](https://github.com/mouadbt/One-Temp-Mail-2/stargazers)
+[![Deployed](https://img.shields.io/badge/Deployed-GitHub%20Pages-brightgreen)](https://mouadbt.github.io/One-Temp-Mail-2/)
+
+## Table of Contents
+- [About](#about)
+- [Features](#features)
+- [Live Demo](#live-demo)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [star](#star)
+
+## About
+One Temp Mail is a free, open-source temporary email service built with React. It allows users to generate disposable email addresses (random or custom with hCaptcha verification), receive emails, and view contents in a user-friendly interface. Perfect for protecting your privacy and avoiding spam when signing up for online services.
+
+## Features
+- 📨 Generate random or custom temporary email addresses
+- 🔒 hCaptcha verification for secure custom email creation
+- 📥 Real-time email inbox with instant message updates
+- 🎨 Responsive, user-friendly interface built with React and Tailwind CSS
+- 🛡️ Protect your personal email from spam and privacy risks
+
+## Live Demo
+Try One Temp Mail in action: [One Temp Mail](https://mouadbt.github.io/One-Temp-Mail-2/)
+
+*See it work: Generate a temporary email and receive messages in real-time!*
 
 ## Technologies Used
-
-**React**: For building the user interface.
-**Tailwind CSS**: For styling the application.
-**shadcn/ui**: For ui components.
-
+- **React**: For building the user interface
+- **Tailwind CSS**: For responsive styling
+- **shadcn/ui**: For modern UI components
 
 ## Installation
-
-**Clone the repository**:
-git clone https://github.com/mouadbt/One-Temp-Mail.git
-
-**Install dependencies**:
-npm i
-
-**Start the development server**:
-npm run dev 
-
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mouadbt/One-Temp-Mail-2.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
 ## Usage
-1. **Open your web browser** and navigate to http://localhost:5173/One-Temp-Mail/.
-2. **Enter your username or random text**: You can enter your desired username or any random text (as you prefer).
-3. **Generate a temporary email**:
-   - Click on the "Generate Email" button to create a new temporary email address.
-4. **Use the generated email address**: Copy and use the temporary email address wherever needed.
-5. **Wait for emails**: Monitor the inbox area for incoming emails.
+1. Open `http://localhost:5173/` in your browser.
+2. Enter a username or random text to generate a temporary email.
+3. Click "Generate Email" to create a disposable address.
+4. Copy the email and use it for sign-ups or testing.
+5. Monitor the inbox for incoming emails in real-time.
 
+
+## Like it ?
+⭐ If you like One Temp Mail, please give it a star!
