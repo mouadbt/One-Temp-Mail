@@ -5,8 +5,8 @@
 
 A free, privacy-focused temporary email service built with React. Generate disposable emails, protect your inbox from spam, and enjoy a seamless user experience.
 
-[![Stars](https://img.shields.io/github/stars/mouadbt/One-Temp-Mail-2)](https://github.com/mouadbt/One-Temp-Mail-2/stargazers)
-[![Deployed](https://img.shields.io/badge/Deployed-GitHub%20Pages-brightgreen)](https://mouadbt.github.io/One-Temp-Mail-2/)
+[![Stars](https://img.shields.io/github/stars/mouadbt/One-Temp-Mail)](https://github.com/mouadbt/One-Temp-Mail/stargazers)
+[![Deployed](https://img.shields.io/badge/Deployed-GitHub%20Pages-brightgreen)](https://mouadbt.github.io/One-Temp-Mail/)
 
 ## Table of Contents
 - [About](#about)
@@ -27,7 +27,7 @@ One Temp Mail is a free, open-source temporary email service built with React. I
 - 🛡️ Protect your personal email from spam and privacy risks
 
 ## Live Demo
-Try One Temp Mail in action: [One Temp Mail](https://mouadbt.github.io/One-Temp-Mail-2/)
+Try One Temp Mail in action: [One Temp Mail](https://mouadbt.github.io/One-Temp-Mail/)
 
 *See it work: Generate a temporary email and receive messages in real-time!*
 
@@ -39,7 +39,7 @@ Try One Temp Mail in action: [One Temp Mail](https://mouadbt.github.io/One-Temp-
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/mouadbt/One-Temp-Mail-2.git
+   git clone https://github.com/mouadbt/One-Temp-Mail.git
    ```
 2. Install dependencies:
    ```bash
