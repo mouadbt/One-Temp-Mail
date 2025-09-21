@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://mouadbt.github.io/One-Temp-Mail/sitemap.txt
