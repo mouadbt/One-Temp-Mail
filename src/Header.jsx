@@ -7,7 +7,6 @@ export default function Header() {
       <Link to="/">
         <img className='Logo w-32 saturate-0 brightness-200' src='/One-Temp-Mail/LOGO.png' alt="free, temporary, email, disposable, mail, email address" />
       </Link>
-      {/* <Link to="sms">Temp Number</Link> */}
     </header>
   )
 }
