@@ -11,7 +11,7 @@ const EmptyState = ({ messagesReady, isFormVisible }) => (
         <h2 className='text-white text-xl font-bold'>
             {messagesReady ? "Waiting for incoming emails" : "Inbox is empty"}
         </h2>
-        <h3 className='text-gray-500 text-lg font-light text-center'>
+        <h3 className='text-white/50 text-lg font-light text-center'>
             {messagesReady ? "This operation is performed automatically" : (
                 isFormVisible ? "Enter your username and create your temporary email" : "Generate a random email or enter a username to create a temporary email"
             )}
