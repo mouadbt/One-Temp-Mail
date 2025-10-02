@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const faqs = [
   {
     q: "What is One Temp Mail? (Temporary Email, Disposable Email, Temp Mail)",
-    a: "One Temp Mail is a free temporary email service that lets you instantly generate a disposable email address to receive emails online without exposing your real inbox. It's perfect for testing, sign-ups, one-time verification codes, and protecting your privacy.",
+    a: "One Temp Mail is a free temporary email service that lets you instantly generate a disposable email address to receive emails online without exposing your real inbox. It's perfect for testing, sign-ups, one-time verification codes, and protecting your privacy. People also search for one time email, one-time email, one time mail, and one temp mail.",
   },
   {
     q: "How does a temporary email address work?",
@@ -69,7 +69,7 @@ const FAQ = ({ className = "", onGenerate }) => {
             <span className="text-white/60">We're here to assist.</span>
           </h2>
           <p className="text-md sm:text-lg text-white/50 md:text-xl">
-            One Temp Mail is a simple, free tool for creating disposable emails. Check the answers on the right or generate an email to see how it works in seconds.
+            One Temp Mail is a simple, free tool for creating disposable emails. Check the answers on the right or generate an email to see how it works in seconds. Performance ranges: 24 hours, 7 days, 28 days, 3 months. Last update: 5 hours ago.
           </p>
           <Button onClick={onGenerate} className="w-full sm:w-fit justify-center active:translate-y-[2px] py-1 group relative flex items-center overflow-hidden px-12 whitespace-nowrap group gap-1 sm:justify-start rounded-3xl bg-oneColor text-sm transition-colors duration-300 hover:bg-gray-100 active:bg-gray-400  hover:text-black shadow-sm font-medium h-9">
             <span className="ease absolute right-0 flex h-9 w-10 translate-x-full transform items-center justify-start duration-300 group-hover:translate-x-0 group-active:-rotate-45 group-active:-translate-y-2 group-active:-translate-x-1">
